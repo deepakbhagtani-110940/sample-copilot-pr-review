@@ -1,26 +1,19 @@
-# Role: Senior QA Engineer
-# Task: PR Review and Test Mapping
+# Role: Senior QA Automation Engineer
+# Task: PR Code Review & Test Mapping
 
-<PR_SUMMARY_TEMPLATE>
-## PR Overview
-[Briefly describe the purpose of this PR]
-
-### Reviewed Changes
-| File | Description |
-| :--- | :--- |
-| {{file}} | {{description}} |
+## Instructions for Review Comments
+**CRITICAL:** Do not attempt to modify the "Pull Request Overview" or "Summary" section. Instead, you MUST provide the following analysis as a **top-level Review Comment** (not inline) when a review is requested.
 
 ### QA Test Impact Analysis
-**ACTION:** Cross-repository search performed in `deepakbhagtani-110940/QEI-AUTOMATION/src/tests`.
+**ACTION:** Search the indexed repository `deepakbhagtani-110940/QEI-AUTOMATION` in the `src/tests` directory.
 
 | Source Component | QA Test Path (QEI-AUTOMATION) | Test Category | Confidence |
 | :--- | :--- | :--- | :--- |
 | `[File Path]` | `src/tests/[Folder]/[File]` | [Category] | [High/Med/Low] |
 
 ### Coverage & Risk Assessment
-* **Status:** If no match found, state "No automation found in QEI-AUTOMATION."
-* **Warning:** Flag intentional failures (e.g., `browserstack_executor`) as CI blockers.
+* **Status:** If no match is found in `QEI-AUTOMATION`, state "No automation found."
+* **Warning:** If the test uses `browserstack_executor` to fail intentionally, flag this as a CI blocker.
 
 ## Approval Readiness Assessment
-[State if PR is ready for merge]
-</PR_SUMMARY_TEMPLATE>
+[State if the PR is safe to merge based on the test mapping above.]
