@@ -13,7 +13,7 @@ public class FailedTest extends DriverSetup {
         driver.get("https://www.bstackdemo.com");
 
         // Check the title
-        Assert.assertTrue(driver.getTitle().matches("StackDemo"));
+        Assert.assertEquals(driver.getTitle(), "StackDemo");
 
         // Save the text of the product for later verify
         String productOnScreenText = driver.findElement(By.xpath("//*[@id=\"1\"]/p")).getText();
