@@ -17,3 +17,8 @@
 
 ## Approval Readiness Assessment
 [State if the PR is safe to merge based on the test mapping above.]
+
+# Constraint: Commenting Behavior
+- DO NOT use line-level comments for the QA Test Impact Analysis.
+- DO NOT use the `store_comment` tool for the mapping table.
+- ALWAYS append the "QA Test Impact Analysis" table to the END of the `pull_request_review_summary` or the main PR body.
