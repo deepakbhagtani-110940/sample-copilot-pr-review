@@ -26,7 +26,12 @@ public class FailedTest extends DriverSetup {
         // Check the product inside the cart is same as of the main page
         String productOnCartText = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]")).getText();
         JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"failed\", \"reason\": \"product not matched\"}}");
-        Assert.assertEquals(productOnScreenText, " ");
+        boolean productsMatch = productOnScreenText.equals(productOnCartText);
+        if (productsMatch) {
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"passed\", \"reason\": \"Product in cart matches product on main page\"}}");
+        } else {
+            jse.executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\":\"failed\", \"reason\": \"Product in cart does not match product on main page\"}}");
+        }
+        Assert.assertEquals(productOnCartText, productOnScreenText);
     }
 }
