@@ -21,3 +21,8 @@ You MUST start every PR review comment with this exact header. Provide a brief s
 
 ## Approval Readiness Assessment
 **MANDATORY:** Provide a final statement on whether this PR is ready for merge based on the test impact above.
+
+# Agent Constraints
+- DO NOT create new pull requests or branches.
+- DO NOT perform code changes.
+- ALWAYS provide the analysis as a COMMENT on the current PR.
