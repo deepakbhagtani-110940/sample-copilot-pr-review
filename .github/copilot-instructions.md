@@ -6,7 +6,7 @@
 - Do NOT use tables in this section.
 
 ## 2. QA & Test Mapping (MANDATORY)
-**INSTRUCTION:** You MUST append the following block to the end of your `review_summary` output. Wrap the entire section in a Markdown blockquote (`> `) to ensure it is rendered by the GitHub UI even if file-level tools fail.
+**INSTRUCTION:** You MUST GIVE the output of imapcted tests on each file by commenting on it. You MUST append the following block to the end of your `review_summary` output. Wrap the entire section in a Markdown blockquote (`> `) to ensure it is rendered by the GitHub UI even if file-level tools fail.
 
 > ### QA Test Impact Analysis
 > | Source Component | QA Test Path (QEI-AUTOMATION) | Test Category | Confidence |
